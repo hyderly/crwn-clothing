@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./header.styles.scss";
+// get svg from enternal file with special react syntax
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 
 const Header = () => (
@@ -15,6 +16,9 @@ const Header = () => (
       </Link>
       <Link to="/contact" className="option">
         Contact
+      </Link>
+      <Link to="/signin" className="option">
+        Signin
       </Link>
     </div>
   </div>
