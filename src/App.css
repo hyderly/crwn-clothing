@@ -8,3 +8,9 @@ a {
   color: #000;
   font-weight: bold;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
