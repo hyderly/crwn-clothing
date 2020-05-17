@@ -20,6 +20,10 @@
   "resolutions": {
     "babel-jest": "24.7.1"
   },
+  "engines": {
+    "node": ">=0.12"
+  },
+  "engineStrict": true,
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
