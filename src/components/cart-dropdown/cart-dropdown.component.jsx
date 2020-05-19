@@ -22,14 +22,20 @@ const CartDropdown = ({ cartItems, history, match, dispatch }) => (
         <span className="empty-message">Your Cart Is Empty</span>
       )}
     </div>
-    <CustomButton
-      onClick={() => {
-        history.push("/checkout");
-        dispatch(toggleCartHidden());
-      }}
-    >
-      GO TO CHECKOUT
-    </CustomButton>
+    {cartItems.length ? (
+      <CustomButton
+        onClick={() => {
+          history.push("/checkout");
+          dispatch(toggleCartHidden());
+        }}
+      >
+        GO TO CHECKOUT
+      </CustomButton>
+    ) : (
+      <CustomButton onClick={() => history.push("/shop")}>
+        Shop Now
+      </CustomButton>
+    )}
   </div>
 );
 
