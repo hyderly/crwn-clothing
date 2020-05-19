@@ -7,10 +7,10 @@ on terminal : git clone https://github.com/hyderumer/crwn-clothing.git
 Or you donwload as Zip file
 
 2-Once its on your local machine run these commands
-cd folderName (Get inside the project folder)
-code .  (Open project folder in VS Code)
-npm install  (Install all dependencies)
-npm start    (Rn on local machine)
+   (i) cd folderName (Get inside the project folder)
+   (ii) code .  (Open project folder in VS Code)
+   (iii) npm install  (Install all dependencies)
+   (iii) npm start    (Rn on local machine)
 
 
 Important: 
