@@ -7,7 +7,7 @@ import CollectionItem from "../collection-item/collection-item.component";
 const CollectionPreview = ({ title, routeName, items }) => (
   <div className="collection-preview">
     <span>
-      <Link className="title" to={routeName}>
+      <Link className="title" to={`shop/${routeName}`}>
         {title}
       </Link>
     </span>

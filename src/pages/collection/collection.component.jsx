@@ -9,9 +9,9 @@ import "./collection.styles.scss";
 
 const CollectionPage = ({ collection }) => {
   const { title, items } = collection;
-  console.log(items);
   return (
     <div className="collection-page">
+      <h1>Collection Page</h1>
       <h1 className="title">{title}</h1>
       <div className="items">
         {items.map((item) => (

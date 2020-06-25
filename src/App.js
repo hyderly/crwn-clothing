@@ -9,7 +9,6 @@ import CheckoutPage from "./pages/checkout/checkout.component";
 
 import { setCurrentUser } from "./redux/user/user.actions";
 import { selectCurrentUser } from "./redux/user/user.selectors";
-import { selectCartItems } from "./redux/cart/cart.selectors";
 
 import SignInAndSignUpPage from "./pages/sign-in-sign-up/sign-in-sign-up.component";
 import Header from "./components/header/header.component";
@@ -38,9 +37,13 @@ class App extends Component {
             ...snapShot.data(),
           });
         });
-      } else {
-        setCurrentUser(userAuth);
       }
+
+      setCurrentUser(userAuth);
+      // addCollectionAndDocuments(
+      //   "collections",
+      //   collectionsArray.map(({ title, items }) => ({ title, items }))
+      // );
     });
   }
 
@@ -55,13 +58,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
-          <Route
-            exact
-            path="/checkout"
-            render={() =>
-              this.props.cartItems ? <CheckoutPage /> : <Redirect to="/" />
-            }
-          />
+          <Route path="/checkout" component={CheckoutPage} />
           <Route
             exact
             path="/signin"
@@ -81,7 +78,6 @@ class App extends Component {
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
-  cartItems: selectCartItems,
 });
 
 const mapDispatchToProps = (dispatch) => ({
